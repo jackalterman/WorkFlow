@@ -1,0 +1,22 @@
+//The Api Backend is running jason-server. It needs to be installed from within the project directory:
+
+npm install -g json-server
+json-server --watch db.json
+
+
+
+curl -i -H "Content-Type: application/json" -X POST -d '{"body" : "Grab some Pizza on the way home."}' http://localhost:3000/notes
+
+curl -i -H "Content-Type: application/json" -X GET http://localhost:3000/notes/1
+
+curl -i -H "Content-Type: application/json" -X GET http://localhost:3000/notes
+
+curl -i -H "Content-Type: application/json" -X GET http://localhost:3000/notes?q=milk
+
+Can also delete and update:
+
+curl -i -H "Content-Type: application/json" -X DELETE http://localhost:3000/notes/3
+
+curl -i -H "Content-Type: application/json" -X PUT -d '{"body" : "Grab some Chinese Takeout on the way home."}' http://localhost:3000/notes/2
+
+
