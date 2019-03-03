@@ -1,17 +1,11 @@
 <h1>{{title}}</h1>
+<app-text></app-text>
+<app-date></app-date>
 
-<div id=date>
 
-</div>
-<script>
-  var todayDate = new Date();
-  todayDate.setDate(todayDate.getDate()-7);
-  var d  = todayDate.toISOString();
-  document.getElementById("date").innerHTML = 'The date is:' + d;
-</script>
 
 <ag-grid-angular 
-    style="height: 700px;" 
+    style="height: 700px; padding: 1%" 
     class="ag-theme-balham"
     [rowData]="rowData | async" 
     [columnDefs]="columnDefs"

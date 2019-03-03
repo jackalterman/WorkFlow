@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'Here is a list of issues for the Angular project';
+  title = 'List of issues for the Angular project (updated within the last 7 days)';
 
       // specify the columns
       columnDefs = [
@@ -19,6 +20,7 @@ export class AppComponent implements OnInit {
         {headerName: "User", field: "user.login", filter: true, resizable:true,sortable:true}
       ];
 
+           
       rowData: any;
 
       constructor(private http: HttpClient) {
