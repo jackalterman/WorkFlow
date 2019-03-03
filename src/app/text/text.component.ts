@@ -9,7 +9,8 @@ import { TestBed } from '@angular/core/testing';
 export class TextComponent implements OnInit {
 
   text = "This app is using Angular and Node.js. The grid is ag-grid, populated from an API call to GitHub."
-  + " The list shows 100 of the most recently updated issues in the Angular project."
+  + " The list shows 100 of the most recently updated issues for the last 7 days in the Angular project."
+  + " Double-click on a row to be taken to that issue."
 
   constructor() { }
 

@@ -23,6 +23,13 @@ export class AppComponent implements OnInit {
            
       rowData: any;
 
+      onRowDoubleClicked(params: any) {
+        var url = "";
+        url = params.data.html_url;
+        window.open(url, "_blank");
+    }
+      
+
       constructor(private http: HttpClient) {
 }
 

@@ -9,5 +9,7 @@
     class="ag-theme-balham"
     [rowData]="rowData | async" 
     [columnDefs]="columnDefs"
-    >
+    (rowDoubleClicked)="onRowDoubleClicked($event)">
 </ag-grid-angular>
+
+
